@@ -38,7 +38,7 @@ with st.container():
     with col_in3:
         buy_d = st.date_input("買進日期", value=datetime(2023, 12, 1))
 
-    curr_p = st.slider("目前市場價格調整", 14.0, 17.0, 15.65, 0.01)
+    curr_p = st.slider("目前市場價格調整", 14.0, 17.0, 15.10, 0.01)
 
 # 計算邏輯
 df_divs = get_dividend_history()
@@ -67,3 +67,4 @@ fig = go.Figure(data=[go.Pie(
     hole=.4
 )])
 st.plotly_chart(fig, use_container_width=True)
+
